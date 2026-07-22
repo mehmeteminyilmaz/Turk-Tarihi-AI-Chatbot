@@ -1,14 +1,14 @@
-﻿<div align="center">
+<div align="center">
 
-# ğŸ›ï¸ Turkish History AI Chatbot
+# 🏛️ Turkish History AI Chatbot
 
 ### An intelligent chatbot fine-tuned on Turkish historical data using LoRA & Unsloth
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)](https://python.org)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch)](https://pytorch.org)
-[![Hugging Face](https://img.shields.io/badge/ğŸ¤—-Transformers-yellow?style=for-the-badge)](https://huggingface.co)
+[![HuggingFace](https://img.shields.io/badge/🤗_Transformers-yellow?style=for-the-badge)](https://huggingface.co)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Open In Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?style=for-the-badge&logo=googlecolab)](https://colab.research.google.com)
+[![Open In Colab](https://img.shields.io/badge/Open%20in-Colab-F9AB00?style=for-the-badge&logo=googlecolab)](https://colab.research.google.com/github/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot/blob/main/chatbot.ipynb)
 
 <img src="images/chatbot_demo.png" alt="Turkish History AI Chatbot Demo" width="800"/>
 
@@ -16,47 +16,47 @@
 
 ---
 
-## ğŸ“– About the Project
+## 📖 About the Project
 
-**Turkish History AI Chatbot** is a domain-specific conversational AI model fine-tuned on Turkish historical texts using **LoRA (Low-Rank Adaptation)** and **Unsloth** for efficient training. The chatbot can answer natural language questions about Ottoman Empire, Turkish Republic, key historical figures, battles, reforms, and more â€” in both Turkish and English.
+**Turkish History AI Chatbot** is a domain-specific conversational AI model fine-tuned on Turkish historical texts using **LoRA (Low-Rank Adaptation)** and **Unsloth** for efficient training. The chatbot can answer natural language questions about the Ottoman Empire, Turkish Republic, key historical figures, battles, reforms, and more — entirely in Turkish.
 
-### âœ¨ Key Features
+### ✨ Key Features
 
-- ğŸ§  **Fine-tuned LLaMA 2 7B** â€” Optimized for Turkish historical knowledge
-- âš¡ **LoRA Fine-Tuning** â€” Efficient training with minimal compute via Unsloth
-- ğŸ’¬ **Natural Language Understanding** â€” Conversational Q&A in Turkish
-- ğŸ¨ **Gradio Interface** â€” Clean, interactive web UI
-- ğŸ”„ **Google Drive Integration** â€” Model weights loaded directly from Drive
-- ğŸ“š **Domain-Specific Knowledge** â€” Ottoman history, Turkish Republic, key figures & events
+- 🧠 **Fine-tuned LLaMA 2 7B** — Optimized for Turkish historical knowledge
+- ⚡ **LoRA Fine-Tuning** — Efficient training with minimal compute via Unsloth
+- 💬 **Natural Language Understanding** — Conversational Q&A in Turkish
+- 🎨 **Gradio Interface** — Clean, interactive web UI
+- 🔄 **Google Drive Integration** — Model weights loaded directly from Drive
+- 📚 **Domain-Specific Knowledge** — Ottoman history, Turkish Republic, key figures & events
 
-### ğŸ¯ Topics Covered
+### 🎯 Topics Covered
 
 | Category | Examples |
 |---|---|
 | Ottoman Empire | Rise & fall, sultans, administrative structure |
-| Turkish Republic | Founding, AtatÃ¼rk's reforms, early republic period |
+| Turkish Republic | Founding, Atatürk's reforms, early republic period |
 | Wars & Battles | War of Independence, Gallipoli, Balkan Wars |
-| Historical Figures | Mustafa Kemal AtatÃ¼rk, Fatih Sultan Mehmet, Suleiman the Magnificent |
-| Reforms | Tanzimat, MeÅŸrutiyet, alphabet reform, secularism |
+| Historical Figures | Mustafa Kemal Atatürk, Fatih Sultan Mehmet, Suleiman the Magnificent |
+| Reforms | Tanzimat, Meşrutiyet, alphabet reform, secularism |
 
 ---
 
-## ğŸ—ï¸ Architecture
+## 🏗️ Architecture
 
 ```
 Base Model: meta-llama/Llama-2-7b-chat-hf
-    â”‚
-    â–¼
+    │
+    ▼
 LoRA Adapter (rank=16, alpha=32)
-    â”‚
-    â”œâ”€â”€ Target Modules: q_proj, v_proj
-    â”‚
-    â””â”€â”€ Training: Unsloth + HuggingFace Trainer
-         â”‚
-         â–¼
-    Saved Adapter â†’ Google Drive
-         â”‚
-         â–¼
+    │
+    ├── Target Modules: q_proj, v_proj
+    │
+    └── Training: Unsloth + HuggingFace Trainer
+         │
+         ▼
+    Saved Adapter → Google Drive
+         │
+         ▼
     Gradio Chatbot Interface
 ```
 
@@ -74,7 +74,7 @@ LoRA Adapter (rank=16, alpha=32)
 
 ---
 
-## ğŸš€ Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -102,14 +102,14 @@ pip install -r requirements.txt
 ### Running the Chatbot
 
 1. Open `chatbot.ipynb` in Google Colab
-2. Enable GPU: `Runtime â†’ Change Runtime Type â†’ T4 GPU`
+2. Enable GPU: `Runtime → Change Runtime Type → T4 GPU`
 3. Mount your Google Drive (model weights will be loaded automatically)
 4. Run all cells
 5. Click the Gradio link to open the chatbot interface
 
 ---
 
-## ğŸ¤– Model Weights
+## 🤖 Model Weights
 
 The model weights are **not included** in this repository due to their large size (~3.5 GB).
 
@@ -121,7 +121,7 @@ The model weights are **not included** in this repository due to their large siz
 # Training takes approximately 1-2 hours on a T4 GPU
 ```
 
-**Option 2: Download from Google Drive**
+**Option 2: Request pre-trained weights**
 
 > Contact me via [GitHub Issues](https://github.com/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot/issues) to request access to the pre-trained weights.
 
@@ -134,7 +134,7 @@ model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 
 ---
 
-## ğŸ“Š Training Details
+## 📊 Training Details
 
 | Detail | Value |
 |---|---|
@@ -148,51 +148,50 @@ model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf")
 
 ---
 
-## ğŸ“ Project Structure
+## 📁 Project Structure
 
 ```
 Turk-Tarihi-AI-Chatbot/
-â”‚
-â”œâ”€â”€ ğŸ““ chatbot.ipynb          # Main notebook: training + inference + Gradio UI
-â”œâ”€â”€ ğŸ“‹ requirements.txt       # Python dependencies
-â”œâ”€â”€ ğŸ“„ README.md              # Project documentation
-â”œâ”€â”€ âš–ï¸  LICENSE               # MIT License
-â”œâ”€â”€ ğŸš« .gitignore             # Files excluded from Git
-â”‚
-â”œâ”€â”€ ğŸ“‚ images/
-â”‚   â”œâ”€â”€ chatbot_demo.png      # Gradio interface screenshot
-â”‚   â””â”€â”€ architecture.png     # Model architecture diagram
-â”‚
-â”œâ”€â”€ ğŸ“‚ dataset/
-â”‚   â””â”€â”€ README.md            # Dataset description and source
-â”‚
-â””â”€â”€ ğŸ“‚ model/
-    â””â”€â”€ README.md            # How to download/train the model
+│
+├── 📓 chatbot.ipynb          # Main notebook: inference + Gradio UI
+├── 📋 requirements.txt       # Python dependencies
+├── 📄 README.md              # Project documentation
+├── ⚖️  LICENSE               # MIT License
+├── 🚫 .gitignore             # Files excluded from Git
+│
+├── 📂 images/
+│   ├── chatbot_demo.png      # Gradio interface screenshot
+│   └── architecture.png     # Model architecture diagram
+│
+├── 📂 dataset/
+│   └── README.md            # Dataset description and source
+│
+└── 📂 model/
+    └── README.md            # How to download/train the model
 ```
 
 ---
 
-## ğŸ’¡ Example Usage
+## 💡 Example Usage
 
 ```
-You: OsmanlÄ± Ä°mparatorluÄŸu ne zaman kuruldu?
+User: Osmanlı'nın kuruluşundaki 'Gaza' ruhunun önemi nedir?
 
-Bot: OsmanlÄ± Ä°mparatorluÄŸu, 1299 yÄ±lÄ±nda Osman Bey tarafÄ±ndan kurulmuÅŸtur.
-     Anadolu'nun kuzeybatÄ±sÄ±nda kÃ¼Ã§Ã¼k bir beylik olarak baÅŸlayan bu devlet,
-     zamanla Asya, Avrupa ve Afrika'yÄ± kapsayan bÃ¼yÃ¼k bir imparatorluÄŸa
-     dÃ¶nÃ¼ÅŸmÃ¼ÅŸtÃ¼r...
+Bot:  Osmanlı'nın kuruluşunda 'Gaza' ruhu, devletme ve devletilme döneminden sonra
+      ülkenin genişlemesine yardımcı olmuştur. Bu durum, Osmanlı'nın genişlemesinin
+      ve güçlenmesinin ana nedenlerinden biri olarak kabul edilir.
 
-You: AtatÃ¼rk hangi reformlarÄ± yaptÄ±?
+User: Malazgirt Savaşı'nın Türk tarihi açısından önemi nedir?
 
-Bot: Mustafa Kemal AtatÃ¼rk, TÃ¼rkiye Cumhuriyeti'nin kurucusu olarak pek Ã§ok
-     kÃ¶klÃ¼ reform gerÃ§ekleÅŸtirmiÅŸtir. Bu reformlar arasÄ±nda harf devrimi (1928),
-     takvim deÄŸiÅŸikliÄŸi, medeni kanunun kabulÃ¼, laiklik ilkesinin benimsenmesi
-     ve eÄŸitim sisteminin yeniden yapÄ±landÄ±rÄ±lmasÄ± yer almaktadÄ±r...
+Bot:  Malazgirt Savaşı, Türk tarihinde önemli bir dönüm noktası olarak kabul edilir.
+      Bu savaştan sonra Osmanlı Devleti'in kurulması sürecine başlamıştır.
+      Ayrıca, bu savaş sonucunda Türk ordusu, Bizans İmparatorluğu'nu yenerek
+      büyük bir toprak kazanmıştır.
 ```
 
 ---
 
-## ğŸ”® Future Improvements
+## 🔮 Future Improvements
 
 - [ ] Expand dataset with more historical sources
 - [ ] Add English language support
@@ -204,26 +203,26 @@ Bot: Mustafa Kemal AtatÃ¼rk, TÃ¼rkiye Cumhuriyeti'nin kurucusu olarak pek Ã
 
 ---
 
-## ğŸ› ï¸ Technologies Used
+## 🛠️ Technologies Used
 
 <div align="center">
 
 | Technology | Purpose |
 |---|---|
-| ğŸ Python | Core programming language |
-| ğŸ”¥ PyTorch | Deep learning framework |
-| ğŸ¤— Transformers | Model architecture & tokenization |
-| âš¡ Unsloth | 2x faster LoRA fine-tuning |
-| ğŸ¯ PEFT | Parameter-efficient fine-tuning |
-| ğŸ¨ Gradio | Interactive web interface |
-| ğŸ““ Google Colab | Training environment (T4 GPU) |
-| ğŸ’¾ Google Drive | Model weight storage |
+| 🐍 Python | Core programming language |
+| 🔥 PyTorch | Deep learning framework |
+| 🤗 Transformers | Model architecture & tokenization |
+| ⚡ Unsloth | 2x faster LoRA fine-tuning |
+| 🎯 PEFT | Parameter-efficient fine-tuning |
+| 🎨 Gradio | Interactive web interface |
+| 📓 Google Colab | Training environment (T4 GPU) |
+| 💾 Google Drive | Model weight storage |
 
 </div>
 
 ---
 
-## ğŸ¤ Contributing
+## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -235,15 +234,15 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ---
 
-## ğŸ“ License
+## 📝 License
 
-This project is licensed under the MIT License â€” see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## ğŸ“§ Contact
+## 📧 Contact
 
-**mehmeteminyilmaz** â€” [GitHub Profile](https://github.com/mehmeteminyilmaz)
+**mehmeteminyilmaz** — [GitHub Profile](https://github.com/mehmeteminyilmaz)
 
 Project Link: [https://github.com/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot](https://github.com/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot)
 
@@ -254,34 +253,34 @@ Project Link: [https://github.com/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot](https
 
 <div align="center">
 
-# ğŸ›ï¸ TÃ¼rk Tarihi Yapay Zeka Sohbet Botu
+# 🏛️ Türk Tarihi Yapay Zeka Sohbet Botu
 
-### LoRA Fine-Tuning ile EÄŸitilmiÅŸ TÃ¼rk Tarihi UzmanÄ± Chatbot
+### LoRA Fine-Tuning ile Eğitilmiş Türk Tarihi Uzmanı Chatbot
 
 </div>
 
 ---
 
-## ğŸ“– Proje HakkÄ±nda
+## 📖 Proje Hakkında
 
-**TÃ¼rk Tarihi Yapay Zeka Sohbet Botu**, LoRA (Low-Rank Adaptation) ve Unsloth kullanÄ±larak TÃ¼rk tarihi verileriyle ince ayar yapÄ±lmÄ±ÅŸ bir dil modelidir. OsmanlÄ± Ä°mparatorluÄŸu, TÃ¼rkiye Cumhuriyeti, Ã¶nemli tarihsel olaylar ve kiÅŸiler hakkÄ±nda doÄŸal dilde sorulara TÃ¼rkÃ§e cevap verebilmektedir.
+**Türk Tarihi Yapay Zeka Sohbet Botu**, LoRA (Low-Rank Adaptation) ve Unsloth kullanılarak Türk tarihi verileriyle ince ayar yapılmış bir dil modelidir. Osmanlı İmparatorluğu, Türkiye Cumhuriyeti, önemli tarihsel olaylar ve kişiler hakkında doğal dilde sorulara Türkçe cevap verebilmektedir.
 
-### ğŸ¯ Kapsanan Konular
+### 🎯 Kapsanan Konular
 
-- OsmanlÄ± Ä°mparatorluÄŸu kuruluÅŸu, yÃ¼kseliÅŸi ve Ã§Ã¶kÃ¼ÅŸÃ¼
-- TÃ¼rkiye Cumhuriyeti'nin kuruluÅŸu ve AtatÃ¼rk dÃ¶nemine ait reformlar
-- KurtuluÅŸ SavaÅŸÄ± ve Ã¶nemli muharebeler
-- Fatih Sultan Mehmet, Kanuni Sultan SÃ¼leyman, Mustafa Kemal AtatÃ¼rk gibi tarihi ÅŸahsiyetler
-- Tanzimat ve MeÅŸrutiyet dÃ¶nemleri
+- Osmanlı İmparatorluğu kuruluşu, yükselişi ve çöküşü
+- Türkiye Cumhuriyeti'nin kuruluşu ve Atatürk dönemine ait reformlar
+- Kurtuluş Savaşı ve önemli muharebeler
+- Fatih Sultan Mehmet, Kanuni Sultan Süleyman, Mustafa Kemal Atatürk gibi tarihi şahsiyetler
+- Tanzimat ve Meşrutiyet dönemleri
 
 ---
 
-## ğŸš€ BaÅŸlangÄ±Ã§
+## 🚀 Başlangıç
 
 ### Gereksinimler
 
-- Google Colab hesabÄ± (Ã¼cretsiz T4 GPU ile Ã§alÄ±ÅŸÄ±r)
-- Google Drive (model aÄŸÄ±rlÄ±klarÄ± iÃ§in)
+- Google Colab hesabı (ücretsiz T4 GPU ile çalışır)
+- Google Drive (model ağırlıkları için)
 
 ### Kurulum
 
@@ -290,37 +289,27 @@ Project Link: [https://github.com/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot](https
 git clone https://github.com/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot.git
 ```
 
-2. **Google Colab'da aÃ§**
-   - `chatbot.ipynb` dosyasÄ±nÄ± Colab'da aÃ§
-   - Runtime â†’ T4 GPU seÃ§
-   - TÃ¼m hÃ¼creleri Ã§alÄ±ÅŸtÄ±r
-   - Gradio linkine tÄ±kla
-
-### Chatbot'u Ã‡alÄ±ÅŸtÄ±r
-
-```python
-# Ã–rnek kullanÄ±m
-soru = "OsmanlÄ± Ä°mparatorluÄŸu kaÃ§ yÄ±l hÃ¼kÃ¼m sÃ¼rdÃ¼?"
-cevap = chatbot(soru)
-print(cevap)
-```
+2. **Google Colab'da aç**
+   - `chatbot.ipynb` dosyasını Colab'da aç
+   - `Runtime → Change Runtime Type → T4 GPU` seç
+   - Tüm hücreleri çalıştır
+   - Gradio linkine tıkla
 
 ---
 
-## ğŸ¤– Model AÄŸÄ±rlÄ±klarÄ±
+## 🤖 Model Ağırlıkları
 
-Model aÄŸÄ±rlÄ±klarÄ± boyutlarÄ± nedeniyle bu repository'ye dahil edilmemiÅŸtir (~3.5 GB).
+Model ağırlıkları boyutları nedeniyle bu repository'ye dahil edilmemiştir (~3.5 GB).
 
-**Modeli yeniden eÄŸitmek iÃ§in:**
-- `chatbot.ipynb` dosyasÄ±ndaki eÄŸitim hÃ¼crelerini Ã§alÄ±ÅŸtÄ±r
-- T4 GPU ile yaklaÅŸÄ±k 1-2 saat sÃ¼rer
+**Modeli yeniden eğitmek için:**
+- `chatbot.ipynb` dosyasındaki eğitim hücrelerini çalıştır
+- T4 GPU ile yaklaşık 1-2 saat sürer
 
-**Ã–nceden eÄŸitilmiÅŸ aÄŸÄ±rlÄ±klar iÃ§in:**
-- [GitHub Issues](https://github.com/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot/issues) Ã¼zerinden benimle iletiÅŸime geÃ§ebilirsin
+**Önceden eğitilmiş ağırlıklar için:**
+- [GitHub Issues](https://github.com/mehmeteminyilmaz/Turk-Tarihi-AI-Chatbot/issues) üzerinden benimle iletişime geçebilirsin
 
 ---
 
-## ğŸ“ Lisans
+## 📝 Lisans
 
-Bu proje MIT LisansÄ± altÄ±nda lisanslanmÄ±ÅŸtÄ±r. Detaylar iÃ§in [LICENSE](LICENSE) dosyasÄ±na bakÄ±nÄ±z.
-
+Bu proje MIT Lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız.
